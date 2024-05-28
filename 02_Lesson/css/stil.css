@@ -1,0 +1,13 @@
+p {
+    color: red;
+    font-size: 20px;
+    font-family: Arial;
+    background-color: #ffffff;
+    border:2px solid #06ff1b;
+
+}
+
+body {
+    background-color: #49a9f7;
+    font-family: serif, sans-serif;
+}
