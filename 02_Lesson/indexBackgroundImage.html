@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image</title>
+
+    <style>
+        html {
+            font-family: Arial, sans-serif;
+            /* Font ailesi belirleme */
+        }
+
+        body {
+            background-image: url('https://images.unsplash.com/photo-1517707711963-adf9078bdf01?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            /* Resmi ekleme */
+            background-repeat: no-repeat;
+            /* Resmi tekrar etme */
+            background-size: cover;
+            /* Resmi kaplama */
+            background-position: center;
+            /* Resmi merkezleme */
+            background-attachment: fixed;
+            /* Resmi sabitleme */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Background Image</h2>
+    <p>Background image
+        <br> Background image with background-size: cover;
+        <br> Background image with background-position: center;
+        <br> Background image with background-attachment: fixed;
+    </p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quaerat harum dicta modi dolor temporibus voluptate perspiciatis quos esse ratione?</p>
+
+
+    <br />
+    <hr />
+
+    <h2>Pictures</h2>
+
+    <picture>
+        <source media="(min-width: 850px)" srcset="assets/division.png"> <!-- 850px'den büyük ekranlarda çalışacak -->
+        <source media="(min-width: 350px)" srcset="assets/employees.png"> <!-- 350px'den büyük ekranlarda çalışacak -->
+        <img src="assets/division.png" alt="division"> <!-- Yukarıdaki iki durum dışında çalışacak -->
+    </picture>
+</body>
+
+</html>
