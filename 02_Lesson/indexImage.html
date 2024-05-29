@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+
+    <style>
+        html {
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #d7f5c8;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 260px;
+            height: 260px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Image</h2>
+    <p>Image with width and height attributes:</p>
+    <!-- Url den resim çekme -->
+    <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Trulli" width="500" height="333">
+
+    <p>Image with width and height style:</p>
+    <!-- Resmi boyutlandırma -->
+    <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Trulli" style="width:500px;height:333px;">
+
+    <p>Image with width and height attributes:</p>
+    <!-- Dosya yolundan resim çekme -->
+    <img src="assets/division.png" alt="division" width="250" height="250">
+    <img src="assets/division.png" alt="division" width="250px" height="250px">
+    <img src="assets/division.png" alt="division" style="width:250px;height:250px;">
+    <br />
+    <p> width ve height attribute'lerini kullanarak resim boyutlarını belirleyebiliriz.
+    </p>
+    <br />
+
+    <h2>Responsive Image</h2>
+    <p>Responsive image:</p>
+    <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Trulli" style="max-width:100%;height:auto;">
+    <p>Responsive image with width and height attributes:</p>
+    <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Trulli" width="500" height="333" style="max-width:100%;height:auto;">
+    <p>Responsive image with width and height style:</p>
+    <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Trulli" style="width:100%;height:auto;">
+    <p>Responsive image with width and height style:</p>
+    <img src="assets/division.png" alt="division" style="width:100%;height:auto;">
+
+    <hr />
+    <h2>Image Map</h2>
+
+    <!-- Resim üzerine tıklanınca farklı sayfalara yönlendirme -->
+    <img src="assets/division.png" alt="division" usemap="#divisionmap" width="250" height="250">
+
+    <map name="divisionmap">
+        <area shape="rect" coords="0,0,82,126" alt="Facebook" href="https://www.facebook.com">
+        <area shape="circle" coords="90,58,3,100" alt="Twitter" href="https://www.twitter.com">
+        <area shape="poly" coords="143,58,170,29,197,58,170,87" alt="Instagram" href="https://www.instagram.com">
+    </map>
+
+
+
+
+</body>
+
+</html>
