@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* Font ailesi belirleme */
+            background-color: rgb(196, 231, 219);
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            /* Tablo kenarlarını belirleme */
+            border-collapse: collapse;
+            /* Tablo kenarlarını birleştirme. collapse: birleştirme */
+        }
+
+        td {
+            padding: 10px;
+            /* Tablo verilerinin iç boşluğunu belirleme */
+        }
+
+        th {
+            padding: 10px;
+            /* Tablo başlıklarının iç boşluğunu belirleme */
+            background-color: rgb(0, 0, 0);
+            /* Tablo başlıklarının arka plan rengini belirleme */
+            color: white;
+            /* Tablo başlıklarının yazı rengini belirleme */
+        }
+
+        caption {
+            font-size: 20px;
+            /* Tablo başlığının font büyüklüğünü belirleme */
+            font-weight: bold;
+            /* Tablo başlığının font kalınlığını belirleme */
+            color: rgb(0, 0, 0);
+            /* Tablo başlığının yazı rengini belirleme */
+        }
+
+        #table4 {
+            border: 2px solid black;
+            /* Tablo kenarlarını belirleme */
+            border-collapse: collapse;
+            /* Tablo kenarlarını birleştirme. collapse: birleştirme */
+        }
+
+        #table4 th {
+            padding: 10px;
+            /* Tablo başlıklarının iç boşluğunu belirleme */
+            background-color: rgb(0, 0, 0);
+            /* Tablo başlıklarının arka plan rengini belirleme */
+            color: white;
+            /* Tablo başlıklarının yazı rengini belirleme */
+
+            font-size: 20px;
+            /* Tablo başlıklarının font büyüklüğünü belirleme */
+
+            /* Kodlama ile ilgili bir font */
+            font-family:  'Courier New', Courier, monospace;
+        }
+
+        #table4 td {
+            padding: 10px;
+            /* Tablo verilerinin iç boşluğunu belirleme */
+        }
+
+        #table4 caption {
+            font-size: 20px;
+            /* Tablo başlığının font büyüklüğünü belirleme */
+            font-weight: bold;
+            /* Tablo başlığının font kalınlığını belirleme */
+            color: rgb(250, 5, 5);
+            /* Tablo başlığının yazı rengini belirleme */
+        }
+
+        #table4 :hover { /* Tablo verilerinin üzerine gelindiğinde */
+            background-color: rgb(192, 98, 43);
+            /* Tablo verilerinin üzerine gelindiğinde arka plan rengini belirleme */
+            color: white;
+            /* Tablo verilerinin üzerine gelindiğinde yazı rengini belirleme */
+        }
+
+        #table4 tr:nth-child(even) { /* Tablo satırlarının çift olanları */
+            background-color: rgb(192, 10, 153);
+            /* Tablo verilerinin arka plan rengini belirleme */
+            color: rgb(255, 255, 255);
+            /* Tablo verilerinin yazı rengini belirleme */
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Table (Tablo) nedir?</p>
+    <br>
+    <p>
+        Tablo, HTML'de verileri düzenlemek ve düzenli bir şekilde göstermek için kullanılan bir yapıdır.Tablolar, satırlar ve sütunlardan oluşur. Tablolar, verileri düzenli bir şekilde göstermek için
+        kullanılır.Tablolar, satırlar ve sütunlardan oluşur. Satırlar, tablonun yatay bölümleridir. Sütunlar ise tablonun dikey bölümleridir.
+    </p>
+    <br>
+
+    <hr />
+    <br />
+
+    <table> <!-- table: tablo oluşturma -->
+        <tr> <!-- tr: table row --> <!-- tr: tablo satırı -->
+            <th>Ad</th> <!-- th: table header -->
+            <th>Soyad</th> <!-- th: tablo başlığı -->
+            <th>Yaş</th>
+        </tr>
+        <!-- 1. satır -->
+        <tr>
+            <td>Abdurrahman</td> <!-- td: table data -->
+            <td>Karaoğlu</td> <!-- td: tablo verisi -->
+            <td>29</td>
+        </tr>
+        <!-- 2. satır -->
+        <tr>
+            <td>Zeyneddin</td>
+            <td>Say</td>
+            <td>25</td>
+        </tr>
+        <!-- 3. satır -->
+        <tr>
+            <td>Ömer</td>
+            <td>Doğan</td>
+            <td>25</td>
+        </tr>
+    </table>
+
+    <br />
+    <hr />
+
+    <table>
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Yaş</th>
+            <th>Fotoğraf</th>
+        </tr>
+        <tr>
+            <td>Abdurrahman</td>
+            <td>Karaoğlu</td>
+            <td>29</td>
+            <td><img src="/assets/division.png" alt="division" width="50" height="50"></td>
+        </tr>
+        <tr>
+            <td>Zeyneddin</td>
+            <td>Say</td>
+            <td>25</td>
+            <td><img src="/assets/division.png" alt="division" width="50" height="50"></td>
+        </tr>
+        <tr>
+            <td>Ömer</td>
+            <td>Doğan</td>
+            <td>25</td>
+            <td><img src="/assets/division.png" alt="division" width="50" height="50"></td>
+        </tr>
+    </table>
+
+    <br />
+    <hr />
+
+    <!-- rowSpan ve colSpan -->
+
+    <table>
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Yaş</th>
+            <th colspan="3">Adres</th>
+            <th>Fotoğraf</th>
+        </tr>
+        <tr>
+            <td>Abdurrahman</td>
+            <td>Karaoğlu</td>
+            <td>29</td>
+            <td>Başakşehir</td>
+            <td>İstanbul</td>
+            <td>Türkiye</td>
+            <td><img src="/assets/division.png" alt="division" width="50" height="50"></td>
+        </tr>
+    </table>
+
+    <br />
+    <hr />
+    <br />
+
+    <!-- rowSpan -->
+
+
+
+    <table id="table4" style="width: 100%;">
+        <caption>Adres Bilgileri</caption>
+        <tr>
+            <th>Ad</th>
+            <td>Abdurrahman</td>
+        </tr>
+        <tr>
+            <th>Soyad</th>
+            <td>Karaoğlu</td>
+        </tr>
+        <tr>
+            <th rowspan="3">Adres</th>
+            <td>Başakşehir</td>
+        </tr>
+        <tr>
+            <td>İstanbul</td>
+        </tr>
+        <tr>
+            <td>Türkiye</td>
+        </tr>
+    </table>
+
+
+
+
+
+
+</body>
+
+
+
+</html>
