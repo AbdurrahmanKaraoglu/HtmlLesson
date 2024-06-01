@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <style>
+        #menu {
+            /* Aşağıdaki kodları açıkla */
+            list-style-type: none; /* Listesindeki öğelerin önündeki işaretçileri kaldırır. */
+            margin: 0; /* Listesinin kenar boşluğunu kaldırır. */
+            padding: 0; /* Listesinin iç kenar boşluğunu kaldırır. */
+            overflow: hidden; /* Listesinin taşan kısımlarını gizler. */
+            background-color: #333; /* Listesinin arka plan rengini belirler. */
+        }
+
+        #menu li {
+            float: left; /* Listesindeki öğeleri yan yana hizalar. */
+        }
+
+        #menu li a {
+            display: block; /* Listesindeki öğeleri blok eleman yapar. */
+            color: white; /* Listesindeki öğelerin metin rengini belirler. */
+            text-align: center; /* Listesindeki öğelerin metin hizalamasını belirler. */
+            padding: 14px 16px; /* Listesindeki öğelerin iç kenar boşluğunu belirler. */
+            text-decoration: none; /* Listesindeki öğelerin alt çizgisini kaldırır. */
+        }
+
+        #menu li a:hover {
+            background-color: #111; /* Listesindeki öğelerin üzerine gelindiğinde arka plan rengini belirler. */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <p>List (listeler) nedir?</p>
+    <ul>
+        <li>HTML'de listeler, belirli bir sıraya veya hiyerarşiye sahip öğeleri gruplamak için kullanılır.</li>
+        <li>HTML'de üç tür liste vardır: sırasız liste, sıralı liste ve tanımlı liste.</li>
+        <li>Sırasız liste, öğelerin sırasını belirtmez ve öğelerin başında bir madde işareti vardır.</li>
+        <li>Sıralı liste, öğelerin sırasını belirtir ve öğelerin başında bir numara veya harf vardır.</li>
+        <li>Tanımlı liste, öğelerin sırasını belirtmez ve her öğenin başında bir etiket vardır.</li>
+    </ul>1
+
+    <p>Anordered List (Sırasız Liste)</p>
+    <ul>
+        <li>HTML'de sırasız liste, öğelerin sırasını belirtmez ve öğelerin başında bir madde işareti vardır.</li>
+        <li>Sırasız liste, <ul> etiketi ile başlar ve </ul> etiketi ile biter.</li>
+        <li>Her öğe,
+        <li> etiketi ile başlar ve </li> etiketi ile biter.</li>
+    </ul>
+
+    <p>Örnek:</p>
+    <ul>
+        <li>Elma</li>
+        <li>Armut</li>
+        <li>Portakal</li>
+    </ul>
+
+    <p>Ordered List (Sıralı Liste)</p>
+    <ul>
+        <li>HTML'de sıralı liste, öğelerin sırasını belirtir ve öğelerin başında bir numara veya harf vardır.</li>
+        <li>Sıralı liste, <ol> etiketi ile başlar ve </ol> etiketi ile biter.</li>
+        <li>Her öğe,
+        <li> etiketi ile başlar ve </li> etiketi ile biter.</li>
+    </ul>
+
+    <p>Örnek:</p>
+    <ol>
+        <li>Elma</li>
+        <li>Armut</li>
+        <li>Portakal</li>
+    </ol>
+
+    <p>Definition List (Tanımlı Liste)</p>
+    <ul>
+        <li>HTML'de tanımlı liste, öğelerin sırasını belirtmez ve her öğenin başında bir etiket vardır.</li>
+        <li>Tanımlı liste, <dl> etiketi ile başlar ve </dl> etiketi ile biter.</li>
+        <li>Her öğe,
+            <dt> etiketi ile başlar ve </dt> etiketi ile biter.
+        </li>
+        <li>Her öğenin tanımı,
+            <dd> etiketi ile başlar ve </dd> etiketi ile biter.
+        </li>
+    </ul>
+
+    <p>Örnek:</p>
+
+    <dl>
+        <dt>Elma</dt>
+        <dd>Elma, gülgiller familyasından, gülgillerin alt familyası olan Maloideae'ye ait bir meyve türüdür.</dd>
+        <dt>Armut</dt>
+        <dd>Armut, gülgiller familyasından, gülgillerin alt familyası olan Maloideae'ye ait bir meyve türüdür.</dd>
+        <dt>Portakal</dt>
+        <dd>Portakal, gülgiller familyasından, gülgillerin alt familyası olan Maloideae'ye ait bir meyve türüdür.</dd>
+    </dl>
+
+    <br />
+    <hr />
+
+    <p>Örnek:</p>
+    <ul style="list-style-type: disc;">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <ul style="list-style-type: circle;">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <ul style="list-style-type: square;">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <ul style="list-style-type: none;">
+        <li>HTML</li>
+        <li>CSS
+            <ul>
+                <li>Bootstrap</li>
+                <li>Foundation</li>
+            </ul>
+        </li>
+        <li>JavaScript</li>
+    </ul>
+
+    <br />
+    <hr />
+
+    <ul id="menu">
+        <li><a href="#">Anasayfa</a></li>
+        <li><a href="#">Hakkımızda</a></li>
+        <li><a href="#">Hizmetler</a></li>
+        <li><a href="#">İletişim</a></li>
+    </ul>
+
+    <br />
+    <hr />
+
+    <ol type="1">
+        <li>HTML
+            <ol type="a">
+                <li>HTML5</li>
+                <li>HTML6</li>
+            </ol>
+        </li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <ol type="A">
+        <li>HTML</li>
+        <li>CSS
+            <ol type="i">
+                <li>Bootstrap</li>
+                <li>Foundation</li>
+            </ol>
+        </li>
+        <li>JavaScript</li>
+    </ol>
+
+    <ol type="a">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <br />
+    <hr />
+
+    <p>Description List (Tanımlı Liste)</p>
+    
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>HTML5</dd>
+        <dd>HTML6</dd>
+        <dt>CSS</dt>
+        <dd>Bootstrap</dd>
+        <dd>Foundation</dd>
+        <dt>JavaScript</dt>
+        <dd>jQuery</dd>
+        <dd>React</dd>
+    </dl>
+
+</body>
+
+</html>
