@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <style>
+        form {
+            border: 3px solid #f1f1f1;
+            /* Formun kenarlarını 3px kalınlığında ve #f1f1f1 renginde çizgi ile çizdik */
+            width: 50%;
+            /* Formun genişliğini %50 yaptık */
+            margin: 0 auto;
+            /* Formu sayfanın ortasına aldık */
+            padding: 10px;
+            /* Formun içerisindeki içeriğin kenarlardan 10px boşluk bıraktık */
+            border-radius: 10px;
+            /* Formun kenarlarını 10px yuvarlak yaptık */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        input[type=text],
+        /* Form elemanı text olduğunda */
+        input[type=submit] {
+            /* Form elemanı text veya submit olduğunda */
+            width: 100%;
+            /* Form elemanlarının genişliğini %100 yaptık */
+            padding: 12px 20px;
+            /* Form elemanlarının içerisindeki içeriğin üst ve alttan 12px, sağ ve soldan 20px boşluk bıraktık */
+            margin: 8px 0;
+            /* Form elemanları arasında 8px boşluk bıraktık */
+            display: inline-block;
+            /* Form elemanlarını yan yana sıraladık */
+            border: 1px solid #ccc;
+            /* Form elemanlarının kenarlarını 1px kalınlığında ve #ccc renginde çizgi ile çizdik */
+            box-sizing: border-box;
+            /* Form elemanlarının içeriğini kenarlarının içine yerleştirdik */
+
+        }
+
+        input[type=submit] {
+            /* Form elemanı submit olduğunda */
+            background-color: #4CAF50;
+            /* Form elemanının arka plan rengini #4CAF50 yaptık */
+            color: white;
+            /* Form elemanının yazı rengini beyaz yaptık */
+            border: none;
+            /* Form elemanının kenarlarını sıfırladık */
+            border-radius: 20px;
+            /* Form elemlarından submit olanın kenarlarını 20px yuvarlak yaptık */
+        }
+
+        input[type=submit]:hover {
+            /* Form elemanına mouse ile gelindiğinde */
+            background-color: #2358cc;
+            /* Form elemanının arka plan rengini #45a049 yaptık */
+        }
+
+        label {
+            /* Form elemanı label olduğunda */
+            padding: 12px 12px 12px 0;
+            /* Form elemanının içerisindeki içeriğin üst ve alttan 12px, sağdan 12px, soldan 0 boşluk bıraktık */
+            display: inline-block;
+            /* Form elemanını yan yana sıraladık */
+        }
+
+        select {
+            /* Form elemanı select olduğunda */
+            width: 100%;
+            /* Form elemanının genişliğini %100 yaptık */
+            padding: 10px 20px 10px 10px;
+            /* Form elemanının içerisindeki içeriğin üst ve alttan 12px, sağ ve soldan 20px boşluk bıraktık */
+            display: inline-block;
+            /* Form elemanını yan yana sıraladık */
+            border: 1px solid #ccc;
+            /* Form elemanının kenarlarını 1px kalınlığında ve #ccc renginde çizgi ile çizdik */
+            box-sizing: border-box;
+            /* Form elemanının içeriğini kenarlarının içine yerleştirdik */
+            font-size: 16px;
+            /* Form elemanının yazı boyutunu 16px yaptık */
+            border-radius: 8px;
+            /* Form elemanının kenarlarını 20px yuvarlak yaptık */
+            text-align: start;
+            /* Form elemanının içeriğini sola yasladık */
+            margin: 8px 0;
+        }
+
+        textarea {
+            /* Form elemanı textarea olduğunda */
+            width: 100%;
+            /* Form elemanının genişliğini %100 yaptık */
+            padding: 12px 20px;
+            /* Form elemanının içerisindeki içeriğin üst ve alttan 12px, sağ ve soldan 20px boşluk bıraktık */
+            display: inline-block;
+            /* Form elemanını yan yana sıraladık */
+            border: 1px solid #ccc;
+            /* Form elemanının kenarlarını 1px kalınlığında ve #ccc renginde çizgi ile çizdik */
+            box-sizing: border-box;
+            /* Form elemanının içeriğini kenarlarının içine yerleştirdik */
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Form nedir?</p>
+    <p>Form, kullanıcıdan bilgi almak için kullanılan bir HTML elemanıdır.</p>
+    <p>Form elemanı, kullanıcıdan bilgi almak için kullanılan bir HTML elemanıdır.</p>
+
+    <p>Örnek:</p>
+
+    <form action="degeleral.html" method="post">
+        <label for="fname">Ad:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Soyad:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="radio" id="erkek" name="cinsiyet" value="erkek" checked="checked">
+        <label for="erkek">Erkek</label>
+        <input type="radio" id="kadin" name="cinsiyet" value="kadin">
+        <label for="kadin">Kadın</label>
+        <br><br>
+        <input type="checkbox" id="futbol" name="futbol" value="futbol">
+        <label for="futbol">Futbol</label>
+        <input type="checkbox" id="basketbol" name="basketbol" value="basketbol">
+        <label for="basketbol">Basketbol</label>
+        <input type="checkbox" id="voleybol" name="voleybol" value="voleybol">
+        <label for="voleybol">Voleybol</label>
+        <br><br>
+        <label for="cars">Araba:</label>
+        <select id="cars" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br><br>
+        <label for="message">Mesaj:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        <br><br>
+
+        <input type="submit" value="Gönder" name="gonder">
+
+    </form>
+
+
+
+
+
+    <br />
+    <hr />
+
+
+
+</body>
+
+</html>
