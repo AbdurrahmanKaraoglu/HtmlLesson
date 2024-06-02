@@ -102,6 +102,36 @@
             /* Form elemanının içeriğini kenarlarının içine yerleştirdik */
             font-size: 16px;
         }
+
+        input[type=radio],
+        input[type=checkbox] {
+            /* Form elemanı radio veya checkbox olduğunda */
+            display: inline-block;
+            /* Form elemanını yan yana sıraladık */
+            margin: 8px 0;
+            /* Form elemanları arasında 8px boşluk bıraktık */
+        }
+
+        input[type=reset] {
+            /* Form elemanı reset olduğunda */
+            background-color: #f44336;
+            /* Form elemanının arka plan rengini #f44336 yaptık */
+            color: white;
+            /* Form elemanının yazı rengini beyaz yaptık */
+            border: none;
+            /* Form elemanının kenarlarını sıfırladık */
+            border-radius: 20px;
+            /* Form elemlarından reset olanın kenarlarını 20px yuvarlak yaptık */
+            width: 100%;
+            /* Form elemanının genişliğini %100 yaptık */
+            padding: 12px 20px;
+        }
+
+        input[type=reset]:hover {
+            /* Form elemanına mouse ile gelindiğinde */
+            background-color: #2358cc;
+            /* Form elemanının arka plan rengini #45a049 yaptık */
+        }
     </style>
 </head>
 
@@ -114,47 +144,100 @@
     <p>Örnek:</p>
 
     <form action="degeleral.html" method="post">
-        <label for="fname">Ad:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Soyad:</label><br>
-        <input type="text" id="lname" name="lname"><br><br>
-        <input type="radio" id="erkek" name="cinsiyet" value="erkek" checked="checked">
-        <label for="erkek">Erkek</label>
-        <input type="radio" id="kadin" name="cinsiyet" value="kadin">
-        <label for="kadin">Kadın</label>
+
+        <fieldset>
+            <legend>Kişisel Bilgiler:</legend>
+            <label for="fname">Ad:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Soyad:</label><br>
+            <input type="text" id="lname" name="lname">
+
+            <br><br>
+            <label for="cinsiyet">Cinsiyet:</label><br>
+            <input type="radio" id="erkek" name="cinsiyet" value="erkek" checked="checked">
+            <label for="erkek">Erkek</label>
+            <input type="radio" id="kadin" name="cinsiyet" value="kadin">
+            <label for="kadin">Kadın</label>
+        </fieldset>
         <br><br>
-        <input type="checkbox" id="futbol" name="futbol" value="futbol">
-        <label for="futbol">Futbol</label>
-        <input type="checkbox" id="basketbol" name="basketbol" value="basketbol">
-        <label for="basketbol">Basketbol</label>
-        <input type="checkbox" id="voleybol" name="voleybol" value="voleybol">
-        <label for="voleybol">Voleybol</label>
+        <fieldset>
+            <legend>İletişim Bilgileri:</legend>
+            <label for="email">E-posta:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="tel">Telefon:</label><br>
+            <input type="text" id="tel" name="tel"><br>
+        </fieldset>
+
         <br><br>
-        <label for="cars">Araba:</label>
-        <select id="cars" name="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="fiat">Fiat</option>
-            <option value="audi">Audi</option>
-        </select>
+        <fieldset>
+            <legend>İlgi Alanları:</legend>
+            <input type="checkbox" id="futbol" name="futbol" value="futbol">
+            <label for="futbol">Futbol</label>
+            <input type="checkbox" id="basketbol" name="basketbol" value="basketbol">
+            <label for="basketbol">Basketbol</label>
+            <input type="checkbox" id="voleybol" name="voleybol" value="voleybol">
+            <label for="voleybol">Voleybol</label>
+        </fieldset>
+
         <br><br>
-        <label for="message">Mesaj:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        <fieldset>
+            <legend>Adres Bilgileri:</legend>
+            <label for="adres">Adres:</label><br>
+            <input type="text" id="adres" name="adres"><br>
+            <label for="il">İl:</label><br>
+            <input type="text" id="il" name="il"><br>
+            <label for="ilce">İlçe:</label><br>
+            <input type="text" id="ilce" name="ilce"><br>
+        </fieldset>
+
+
+
         <br><br>
+
+        <fieldset>
+            <legend>Araç Bilgileri:</legend>
+            <label for="cars">Araba:</label>
+            <select id="cars" name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>İletişim:</legend>
+            <label for="message">Mesaj:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        </fieldset>
+
+        <br><br>
+
+        <input list="citys" id = "city" name="city">
+        <datalist id="citys">
+            <option value="Ankara">
+            <option value="İstanbul">
+            <option value="İzmir">
+            <option value="Antalya">
+        </datalist>
+
 
         <input type="submit" value="Gönder" name="gonder">
+        <input type="reset" value="Temizle" name="temizle">
+        <br><br>
+
+        <input type="button" onclick="alert('Merhaba Dünya!')" value="Tıkla!">
+
+        <br />
+        <hr />
+
+        <label for="bio">Biografi:</label>
+        <textarea name="bio" id="bio" style="width: 200px; height: 50px;"></textarea>
+        <br />
+
+        <button type="button" onclick="alert('Merhaba Dünya!')">Tıkla!</button>
 
     </form>
-
-
-
-
-
-    <br />
-    <hr />
-
-
-
 </body>
 
 </html>
